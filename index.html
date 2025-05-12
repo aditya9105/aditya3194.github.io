@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Webpage</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Book Collection Table */
+        .book-collection {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .book-collection th, .book-collection td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .book-collection th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        /* Popular Book of the Month */
+        .popular-book {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .popular-book img {
+            max-width: 150px;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .popular-book h3 {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Library Introduction Video */
+        .library-video {
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Search & Recommend Books */
+        .search-recommend {
+            margin-bottom: 20px;
+        }
+
+        .search-recommend label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .search-recommend input[type="text"],
+        .search-recommend textarea {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .search-recommend textarea {
+            resize: vertical;
+        }
+
+        .search-recommend button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-recommend button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Book Collection</h2>
+        <table class="book-collection">
+            <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Hobbit</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Fantasy</td>
+                </tr>
+                <tr>
+                    <td>War and Peace</td>
+                    <td>Leo Tolstoy</td>
+                    <td>Historical</td>
+                </tr>
+                <tr>
+                    <td>1984</td>
+                    <td>George Orwell</td>
+                    <td>Dystopian</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Popular Book of the Month</h2>
+        <div class="popular-book">
+            <img src="/Users/adityasuresh/Desktop/gigthub/image.png" alt="Popular Book">
+            <h3>The Popular Book Title</h3>
+        </div>
+
+        <h2>Library Introduction Video</h2>
+        <div class="library-video">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/your_video_id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h2>Search & Recommend Books</h2>
+        <div class="search-recommend">
+            <div>
+                <label for="search-book">Search for a Book:</label>
+                <input type="text" id="search-book" name="search-book" placeholder="Enter book name...">
+            </div>
+            <div>
+                <label for="your-name">Your Name:</label>
+                <input type="text" id="your-name" name="your-name" placeholder="Enter your name...">
+            </div>
+            <div>
+                <label for="recommend-book">Recommend a Book:</label>
+                <input type="text" id="recommend-book" name="recommend-book" placeholder="Enter book title...">
+            </div>
+            <div>
+                <label for="recommend-reason">Why do you recommend this book?</label>
+                <textarea id="recommend-reason" name="recommend-reason" rows="4" placeholder="Write your reason..."></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
